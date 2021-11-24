@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from misc import translater_apperently
 
 #this file is where the program starts
 #the commands will be detected and will and sent to their handelers here
@@ -36,6 +37,9 @@ async def kill(ctx, arg):
     
     await ctx.send(f'abcdefg {arg} my enemy \n stick a sword up his nose slash and burn there he goes \n abcdefg {arg} my enemy')
 
+bot.command()
+async def translate(ctx, *args):
+    ctx.send(translater_apperently.translate(args[0], args[1]))
 
 @bot.event
 async def on_reaction_add(reaction, user):
