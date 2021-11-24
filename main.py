@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
 
-
+#this file is where the program starts
+#the commands will be detected and will and sent to their handelers here
 
 bot = commands.Bot(command_prefix='//')
 
@@ -36,6 +37,21 @@ async def kill(ctx, arg):
     await ctx.send(f'abcdefg {arg} my enemy \n stick a sword up his nose slash and burn there he goes \n abcdefg {arg} my enemy')
 
 
+@bot.event
+async def on_reaction_add(reaction, user):
+    if user != bot.user:
+        
+        
+        
+        
+        if str(reaction.emoji) == "➡️":
+            #fetch new results from the Spotify API
+            newSearchResult = discord.Embed(...)
+            await reaction.message.edit(embed=newSearchResult)
+        if str(reaction.emoji) == "⬅️":
+            #fetch new results from the Spotify API
+            newSearchResult = discord.Embed(...)
+            await reaction.message.edit(embed=newSearchResult)
 
 
 
