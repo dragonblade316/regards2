@@ -5,6 +5,9 @@ from misc import translater_apperently
 #this file is where the program starts
 #the commands will be detected and will and sent to their handelers here
 
+token = input("input token here")
+
+
 bot = commands.Bot(command_prefix='//')
 
 @bot.event
@@ -39,6 +42,7 @@ async def kill(ctx, arg):
 
 bot.command()
 async def translate(ctx, *args):
+    ctx.send("tranlating")
     ctx.send(translater_apperently.translate(args[0], args[1]))
 
 @bot.event
@@ -60,7 +64,7 @@ async def on_reaction_add(reaction, user):
 
 
 
-bot.run('ODY0OTE3MDk1MDc3NTExMTc4.YO8a0A.Lf0nT8FSm6lgj1ByMMW7wHEhJAY')
+bot.run(token)
 
 
 
