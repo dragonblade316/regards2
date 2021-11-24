@@ -32,7 +32,7 @@ async def kill(ctx, arg):
     #for fun it cant kill me lol
     if 'dragonblade316' == arg:
         await ctx.send('cant kill him he built this thing')
-        return 0
+        return 1
     
     await ctx.send(f'abcdefg {arg} my enemy \n stick a sword up his nose slash and burn there he goes \n abcdefg {arg} my enemy')
 
